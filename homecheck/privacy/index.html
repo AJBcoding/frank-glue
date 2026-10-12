@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How HomeCheck handles Gmail access, mail, unread badges, credentials, and privacy choices.">
+  <title>Privacy Policy — HomeCheck</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>main.wrap { max-width: 760px; padding-block: 48px 72px; }</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="../">HomeCheck</a>
+    <nav aria-label="Main navigation"><a href="../">Home</a><a href="../privacy/">Privacy</a></nav>
+  </header>
+  <main id="main" class="wrap"><article class="policy">
+<header class="policy-heading"><p class="eyebrow">HomeCheck · Your information</p><h1>Privacy Policy</h1><p class="effective">Effective October 12, 2026</p><p class="lede">How HomeCheck’s mail, messaging, and unread-badge features handle your information.</p></header>
+<section><h2>Who operates HomeCheck</h2><p>Anthony Byrnes operates HomeCheck as a privately configured iPhone app. This policy covers its messaging and Gmail features and these informational web pages. Contact <a href="mailto:sculler-floaty-0u@icloud.com">sculler-floaty-0u@icloud.com</a> for questions or privacy requests.</p></section>
+<section><h2>Google access for unread badges</h2><p>If you authorize Gmail notifications, HomeCheck requests the Gmail metadata permission (<code>gmail.metadata</code>) and offline access. Google describes this permission as access to metadata such as labels and message headers, without message bodies or attachments.</p><p>The notification implementation uses the account email address to verify the configured mailbox, the Inbox unread count to calculate the badge, and mailbox-change signals to trigger a fresh count. It does not fetch email bodies or attachments through this OAuth connection. Google’s change notifications contain the mailbox email address and a history identifier.</p><p>The backend retains an OAuth refresh token so it can update the unread badge while the app is closed and renew the mailbox notification subscription. It does not use this OAuth connection to send, read message bodies, or delete mail.</p></section>
+<section><h2>The separate mail connection</h2><p>Reading and sending Gmail in HomeCheck uses a separate, owner-configured Gmail app password with IMAP and SMTP. The backend and iPhone process message addresses, subjects, dates, unread flags, and message text as needed to display Inbox and Sent, open messages, compose and reply, mark messages read, and move messages to Trash.</p><p>Revoking the Google authorization for badges does not revoke this separate app password. Each connection can be disabled separately.</p><p>Twilio and telecommunications carriers process phone numbers, text-message content, attachments, and delivery information for text conversations. The app and any owner-configured message archive may also retain text-conversation data.</p></section>
+<section><h2>Storage and service providers</h2><p>Google provides Gmail and the cloud notification delivery service. Twilio hosts the backend, processes mail requests, and stores the most recent Gmail unread count with its observation time. Notification credentials and mailbox configuration are held in private backend settings and on the owner’s setup computer.</p><p>Twilio also stores installation records and Apple push tokens needed to target registered devices. Apple receives the device token and badge count for badge delivery. The badge payload does not include email addresses, subjects, or message bodies. Provider systems may process operational and security information according to their own policies.</p><p>Mail remains in Gmail according to your mailbox actions and Google’s retention processes. Credentials, count caches, and device records remain until removed or replaced by the operator. Signing out or revoking access does not automatically erase earlier records, provider backups, or copies on a device.</p></section>
+<section><h2>How information is used</h2><p>Google account data is used to provide the mail and notification features described here. It is not sold, used for advertising, or used to train artificial-intelligence models. It is shared with the service providers needed to operate these features, or as required by law.</p><p>HomeCheck’s use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p></section>
+<section><h2>Your choices and deletion requests</h2><p>You can revoke HomeCheck’s Google authorization in your <a href="https://myaccount.google.com/connections">Google Account connections</a>. To disable the separate mail connection, revoke its Gmail app password as well. Revoking a credential stops future access through that credential; it does not delete messages already in Gmail or earlier copies.</p><p>You can turn off HomeCheck badges in iPhone notification settings. Contact Anthony Byrnes at <a href="mailto:sculler-floaty-0u@icloud.com">sculler-floaty-0u@icloud.com</a> to request disconnection or deletion of retained app credentials, count caches, installation records, or other information. Requests may require identity verification; any applicable retention limits will be explained.</p></section>
+<section><h2>This website and updates</h2><p>These pages have no sign-up form, advertising trackers, or analytics scripts added by HomeCheck. GitHub Pages hosts the website and may process technical information, such as IP addresses, to serve and secure it. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p><p>Changes to this policy will be posted here with a revised effective date. Return to the <a href="../">HomeCheck homepage</a> for app information and support.</p></section>
+</article></main>
+  <footer class="site-footer wrap">
+    <div><a class="footer-brand" href="../">HomeCheck</a><p>Operated by Anthony Byrnes.</p><a href="mailto:sculler-floaty-0u@icloud.com">sculler-floaty-0u@icloud.com</a></div>
+    <nav aria-label="Footer navigation"><a href="../privacy/">Privacy Policy</a></nav>
+    <p class="copyright">© 2026 Anthony Byrnes</p>
+  </footer>
+</body>
+</html>
